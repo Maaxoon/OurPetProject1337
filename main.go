@@ -20,8 +20,8 @@ func handlePOST(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Failed to parse form", http.StatusBadRequest)
 		return
 	}
-	name := r.FormValue("name")
-	fmt.Fprintf(w, "Hello, %s!", name)
+	login := r.FormValue("login")
+	fmt.Fprintf(w, "Hello, %s!", login)
 }
 
 func main() {
