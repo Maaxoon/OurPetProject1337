@@ -26,4 +26,10 @@ func main() {
     http.HandleFunc("/handle-post", handlePOST)
 
 	http.ListenAndServe(":80", nil)
+=======
+import "fmt"
+
+func main() {
+	fmt.Println("hello world")
+>>>>>>> 3ece21d0ff182f61ad670d8da6ffdfae3eb3adc1
 }
