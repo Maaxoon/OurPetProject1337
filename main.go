@@ -25,7 +25,7 @@ func handlePOST(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	http.HandleFunc("/index", handleIndex)
+	http.Handle("/", http.FileServer(http.Dir("./static")))
 	http.HandleFunc("/handle-get", handleGET)
 	http.HandleFunc("/handle-post", handlePOST)
 
